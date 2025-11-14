@@ -1,0 +1,5 @@
+# This directory stores trained models and preprocessed data
+# Files will be created after running:
+# 1. preprocess_data.py (creates label_encoder.pkl and .npy files)
+# 2. train_model.py (creates sign_model.h5)
+

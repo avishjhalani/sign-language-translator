@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Translator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="card-title text-center mb-0">
+                            <i class="bi bi-translate"></i> AI Sign Language Translator
+                        </h1>
+                    </div>
+                    <div class="card-body">
+                        <!-- Video Feed Section -->
+                        <div class="row mb-4">
+                            <div class="col-md-8 mx-auto">
+                                <div class="video-container">
+                                    <img id="videoFeed" src="" alt="Video Feed" class="img-fluid rounded" style="display: none;">
+                                    <div id="videoPlaceholder" class="text-center p-5 bg-dark text-white rounded">
+                                        <h5>Camera Feed</h5>
+                                        <p>Click "Start Camera" to begin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Control Buttons -->
+                        <div class="row mb-4">
+                            <div class="col-12 text-center">
+                                <button id="startBtn" class="btn btn-success btn-lg me-2">
+                                    <i class="bi bi-play-circle"></i> Start Camera
+                                </button>
+                                <button id="stopBtn" class="btn btn-danger btn-lg">
+                                    <i class="bi bi-stop-circle"></i> Stop Camera
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Prediction Display -->
+                        <div class="row">
+                            <div class="col-md-6 mx-auto">
+                                <div class="card bg-light">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Current Prediction</h5>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h2 id="predictionText" class="text-primary mb-2">Waiting...</h2>
+                                        <p id="confidenceText" class="text-muted mb-0">Confidence: 0%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sentence Builder -->
+                        <div class="row mt-4">
+                            <div class="col-md-8 mx-auto">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Sentence Builder</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="input-group mb-3">
+                                            <input type="text" id="sentenceInput" class="form-control form-control-lg" 
+                                                   placeholder="Detected signs will appear here..." readonly>
+                                            <button id="addWordBtn" class="btn btn-primary" disabled>
+                                                Add Word
+                                            </button>
+                                            <button id="clearBtn" class="btn btn-secondary">
+                                                Clear
+                                            </button>
+                                        </div>
+                                        <div id="sentenceDisplay" class="alert alert-info" style="min-height: 50px;">
+                                            <strong>Sentence:</strong> <span id="sentenceText">-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="alert alert-info">
+                                    <h6><strong>Instructions:</strong></h6>
+                                    <ul class="mb-0">
+                                        <li>Click "Start Camera" to begin video feed</li>
+                                        <li>Show sign language gestures to your webcam</li>
+                                        <li>The detected sign will appear above the video</li>
+                                        <li>Click "Add Word" to add the current prediction to your sentence</li>
+                                        <li>Make sure you have collected training data and trained the model first!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

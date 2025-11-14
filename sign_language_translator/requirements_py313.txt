@@ -1,0 +1,21 @@
+# Sign Language Translator - Python Dependencies
+# Alternative requirements for Python 3.12+ (MediaPipe not officially supported)
+# For best results, use Python 3.8-3.11 with requirements.txt
+
+# Core ML/AI Libraries
+tensorflow>=2.10.0
+opencv-python>=4.7.0
+# mediapipe - NOT AVAILABLE for Python 3.13
+# You'll need to use Python 3.11 or earlier, or build MediaPipe from source
+numpy>=1.23.0
+
+# Web Framework
+flask>=2.3.0
+
+# Data Processing
+scikit-learn>=1.2.0
+Pillow>=9.5.0
+
+# Utilities
+python-dateutil>=2.8.2
+

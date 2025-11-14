@@ -1,0 +1,24 @@
+# Sign Language Translator - Python Dependencies
+# Note: Python 3.8-3.11 recommended for best compatibility
+
+# Core ML/AI Libraries
+tensorflow>=2.10.0
+opencv-python>=4.7.0
+mediapipe>=0.10.0
+numpy>=1.23.0
+
+# Web Framework
+flask>=2.3.0
+
+# Data Processing
+scikit-learn>=1.2.0
+Pillow>=9.5.0
+
+# Text-to-Speech (Optional - install separately if needed)
+# pyttsx3>=2.90
+# gtts>=2.3.0
+# pygame>=2.5.0
+
+# Utilities
+python-dateutil>=2.8.2
+
