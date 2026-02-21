@@ -38,9 +38,6 @@ model/*.h5
 model/*.pkl
 model/*.npy
 
-# Dataset (large)
-dataset/
-
 # OS
 .DS_Store
 Thumbs.db
